@@ -18,14 +18,11 @@ tags:
   targetMinishift: false
 
 
-defaultPersistentStorageClass: gke-ssd
-
 kafka:
   strimzi:
     useDedicatedNodes: true
     kafka:
      persistentVolumeClaimSize: 100Gi
-     persistentStorageClass: gke-ssd
      resources:
         requests:
           memory: "5Gi"
@@ -33,7 +30,6 @@ kafka:
           memory: "9Gi"
     zookeeper:
       persistentVolumeClaimSize: 10Gi
-      persistentStorageClass: gke-ssd
       resources:
         requests:
           memory: "1Gi"
@@ -53,4 +49,3 @@ operator:
   sparkExecutor:
     requestsCpu: "1"
     requestsMemory: "2G"
-  persistentStorageClass: "nfs-client"
