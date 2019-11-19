@@ -14,8 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-
 # Utilities for pretty-printing errors
 . common/utils.sh
 
@@ -39,7 +37,7 @@ export TILLER_NAMESPACE="kube-system"
 
 # Check that we have logged into a Kubernetes cluster
 kubectl get pods > /dev/null 2>&1
-if [ $? -ne 0 ]; then 
+if [ $? -ne 0 ]; then
     print_error_message "It looks like you are not logged into a Kubernetes cluster. Please 'gcloud init' before running the installer."
     exit 1
 fi
