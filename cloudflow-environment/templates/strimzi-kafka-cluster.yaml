@@ -169,7 +169,7 @@ spec:
       size: {{ .Values.kafka.strimzi.zookeeper.persistentVolumeClaimSize }}
       deleteClaim: {{ .Values.kafka.strimzi.deletePersistentVolumeClaimsOnDelete }}
       {{ if .Values.kafka.strimzi.zookeeper.persistentStorageClass }}
-      class: {{ .Values.kafka.strimzi.zookeeper.persistentStorageClass }}      
+      class: {{ .Values.kafka.strimzi.zookeeper.persistentStorageClass }}
       {{ end }}
     {{ if .Values.kafka.strimzi.useDedicatedNodes }}
     tolerations:
@@ -220,4 +220,3 @@ spec:
     topicOperator:
       resources:
 {{ toYaml .Values.kafka.strimzi.entityOperator.topicOperator.resources | indent 8 }}
-{{ end }}
