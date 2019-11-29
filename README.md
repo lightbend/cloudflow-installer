@@ -1,3 +1,8 @@
+# This repository has been deprecated
+The installation scripts for Cloudflow can be found in the main repo at:
+https://github.com/lightbend/cloudflow/tree/master/installer
+---
+
 # Cloudflow-installer
 
 This is the installer for the [Cloudflow](https://github.com/lightbend/cloudflow) toolkit. Currently we support GKE and we are planning to support other environments in the future.
